@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { deleteCard, readDeck } from "../utils/api";
+import { deleteCard } from "../utils/api";
 
 function Displaycard({ card, deck }) {
     async function handleDeleteCard() {

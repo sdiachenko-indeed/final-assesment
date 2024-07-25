@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import DeckInromation from "./DeckInformation";
 import { Link } from "react-router-dom";
 import NotFound from "../Layout/NotFound";
