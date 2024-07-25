@@ -3,62 +3,51 @@
     {
       "id": 1,
       "name": "Rendering in React",
-      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation"
+      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. "
     },
     {
-      "id": 2,
-      "name": "deck 2",
-      "description": "deck 2 desc"
+      "name": "React Router",
+      "description": "React Router is a collection of navigational components that compose declaratively with your application.",
+      "id": 2
     }
   ],
   "cards": [
     {
       "id": 1,
-      "front": "Differentiate between Real DOM and",
-      "back": "Virtual DOM updates are faster but do not directly update",
-      "deckId": 1
-    },
-    {
-      "id": 2,
-      "front": "asdfen Real DOM and Virtual DOM.",
+      "front": "Differentiate between Real DOM and Virtual DOM.",
       "back": "Virtual DOM updates are faster but do not directly update the HTML",
       "deckId": 1
     },
     {
-      "id": 3,
-      "front": "12312Real DOM and Virtual DOM.",
-      "back": "Virtual DOM updates are faster but do not directly update the HTML",
+      "id": 2,
+      "front": "How do you modify the state of a different React component?",
+      "back": "Not at all! State is visible to the component only.",
       "deckId": 1
     },
     {
-      "id": 1,
-      "front": "c1d2",
-      "back": "c1d2qwe",
-      "deckId": 2
-    },
-    {
-      "id": 2,
-      "front": "c2d2",
-      "back": "Vc2d2",
-      "deckId": 2
-    },
-    {
       "id": 3,
-      "front": "c3d2",
-      "back": "Vc3d2",
-      "deckId": 2
+      "front": "How do you pass data 'down' to a React child component?",
+      "back": "As properties or props",
+      "deckId": 1
     },
     {
-      "id": 4,
-      "front": "c4d2",
-      "back": "c4d212312313",
-      "deckId": 2
+      "front": "What path will match the follow Route?\n<Route>\n  <NotFound />\n</Route>",
+      "back": "All paths. A route with no path matches all URL's",
+      "deckId": 2,
+      "id": 4
     },
     {
-      "front": "sdfsdfsdf",
-      "back": "sdfsdfsdfsdf",
-      "deckId": 1,
+      "front": "What does <Switch> do?",
+      "back": "Renders the first matching child <Route> ",
+      "deckId": 2,
       "id": 5
+    },
+    {
+      "cards": [],
+      "front": "b",
+      "back": "b",
+      "deckId": 1,
+      "id": 7
     }
   ]
 }

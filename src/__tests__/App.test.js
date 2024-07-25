@@ -1,8 +1,9 @@
 import React from "react";
-import { Router } from "react-router-dom";
-import { act, render, screen } from "@testing-library/react";
+// import {act} from 'react';
+import { render, screen } from "@testing-library/react";
 import App from "../App";
-import { createMemoryHistory } from "history";
+import { MemoryRouter } from "react-router-dom";
+import { act } from 'react-dom/test-utils';
 import "@testing-library/jest-dom/extend-expect";
 import {
   createCard,
@@ -63,12 +64,11 @@ describe("App", () => {
   });
 
   test('landing on a bad page shows "Not Found" page', () => {
-    const history = createMemoryHistory();
-    history.push("/some/bad/route");
+
     render(
-      <Router history={history}>
-        <App />
-      </Router>
+        <MemoryRouter initialEntries={["/some/bad/route"]}>
+            <App />
+        </MemoryRouter>      
     );
     expect(screen.getByText("Not Found")).toBeTruthy();
   });
@@ -93,14 +93,14 @@ describe("App", () => {
 
     listDecks.mockImplementation(() => mockDecksPromise);
 
-    const history = createMemoryHistory();
+
     render(
-      <Router history={history}>
-        <App />
-      </Router>
+        <MemoryRouter initialEntries={["/"]}>
+            <App />
+        </MemoryRouter>
     );
 
-    await act(() => mockDecksPromise);
+    await act(async () => mockDecksPromise);
 
     expect(screen.getByText("Mock Rendering in React")).toBeTruthy();
     expect(screen.getByText("2 cards")).toBeTruthy();
