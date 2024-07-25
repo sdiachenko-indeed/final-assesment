@@ -1,40 +1,56 @@
-import { React, useEffect, useState } from "react";
+import React, { useState } from "react";
+import { Switch, Route } from "react-router-dom";
 import Header from "./Header";
-import DeckList from "../components/DeckList";
-import { Route, Routes } from "react-router-dom";
-import CreateDeck from "../components/CreateDeck";
-import DisplayDeck from "../components/DisplayDeck";
-import { listDecks } from "../utils/api";
+import NotFound from "./NotFound";
+import Home from "./Home";
+import CreateDeck from "./CreateDeck";
+import Deck from "./Deck";
+import Study from "./Study";
+import EditDeck from "./EditDeck";
+import AddCard from "./AddCard";
+import EditCard from "./EditCard";
+
 
 function Layout() {
-  const [decks, setDecks] = useState([]);
-  useEffect(() => {
-
-    async function loadDecks() {
-      const response = await listDecks();
-      setDecks(response);
-    }
-    loadDecks();
-  }, []);
-
-
+  const [ deckLength, setDeckLength ] = useState(0)
+  const updateDecks = (newDecks) => {
+    setDeckLength(() => deckLength + newDecks)
+  }
+  
   return (
-    <>
+    <div>
       <Header />
-      <div className="container">
-
-        <Routes>
-          <Route path="decks/new" element={<CreateDeck decks={decks} />} />
-          <Route path="decks/:deckId/*" element={<DisplayDeck decks={decks} />} />
-          <Route path="*" element={<DeckList decks={decks} />} />
-        </Routes>
-
-
+      <div className="container mb-4">
+        {/* TODO: Implement the screen starting here */}
+        <Switch>
+          <Route exact path="/">
+            <Home updateDecks={updateDecks} deckLength={deckLength} />
+          </Route>
+          <Route path ="/decks/new">
+            <CreateDeck updateDecks={updateDecks} deckLength={deckLength} />
+          </Route>
+          <Route exact path="/decks/:deckId">
+            <Deck updateDecks={updateDecks} />
+          </Route>
+          <Route path="/decks/:deckId/study">
+            <Study />
+          </Route>
+          <Route path="/decks/:deckId/edit">
+            <EditDeck updateDecks={updateDecks} />
+          </Route>
+          <Route path="/decks/:deckId/cards/new">
+            <AddCard updateDecks={updateDecks} />
+          </Route>
+          <Route path="/decks/:deckId/cards/:cardId/edit">
+            <EditCard updateDecks={updateDecks} />
+          </Route>
+          <Route>
+          <NotFound />
+          </Route>
+        </Switch>
       </div>
-    </>
+    </div>
   );
 }
-
-
 
 export default Layout;

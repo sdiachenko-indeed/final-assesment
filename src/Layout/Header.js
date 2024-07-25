@@ -1,14 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <header className="jumbotron bg-dark">
-      <div className="container text-white">
-        <Link to="">
-          <h1 className="display-4">Flashcard-o-matic</h1>
-        </Link>
-        <p className="lead">Discover The Flashcard Difference.</p>
+    <header
+      className="mb-3 relative bg-cover bg-center text-white"
+      style={{
+        backgroundImage:
+          "url('https://source.unsplash.com/1600x900/?education')",
+      }}
+    >
+      <div className="absolute inset-0 bg-black opacity-60"></div>
+      <div className="relative container text-center py-20">
+        <h1 className="text-5xl font-bold text-white">Flashcard-o-matic</h1>
+        <p className="text-xl mt-4 text-white">
+          Discover The Flashcard Difference.
+        </p>
       </div>
     </header>
   );
