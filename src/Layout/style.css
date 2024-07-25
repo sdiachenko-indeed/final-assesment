@@ -1,0 +1,489 @@
+/* Start of 'universal' 'elements' */
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+.btn {
+  border-radius: 5px;
+}
+.btn-danger:hover {
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+ 
+}
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+
+}
+
+.btn:hover {
+    color: #212529;
+    text-decoration: none;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+
+
+
+
+label {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.eye-img {
+    width:18px;
+    height:28px;
+    font-weight: bold;
+    margin-right: .25rem;
+}
+
+.book-img {
+
+}
+
+
+
+
+.home-link {
+    text-decoration: none;
+}
+.home-icon {
+    vertical-align: sub;
+    margin-right: .4rem;
+}
+.nav-bar {
+    background-color:#e2e2e2de;
+    color:#575454d4;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.edit-img {
+
+}
+
+.add-img {
+    width: 20px;
+    height: 21px;
+}
+
+/* End of 'universal' 'elements' */
+
+/* Start of './Layout/index.js' */
+
+.Layout-index-deck-div {
+    border: 1px solid #dfd6d6;
+    padding: 1.1rem;
+    border-radius: 5px;
+}
+
+.create-deck-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 1%;
+}
+
+.trashcan-btn {
+    justify-self: flex-end;
+}
+.Layout-index-btns-div {
+    display: flex;
+}
+
+.Layout-index-view-deck-btn {
+ margin-right: 1%; 
+ background-color: #6c757d;
+ color: #fff;
+ border:1px solid #6c757d;
+ padding: .01rem 2.75rem;
+ border-radius: 6px;
+ text-decoration: none; 
+ align-items: center;
+ justify-content: center;
+ width: 4.7rem;
+ display: flex;
+}
+
+.Layout-index-study-deck-btn {
+    margin-right: 72%; 
+    background-color: #0d6efd;
+    color:#fff;
+    padding: .1rem 3.25rem .1rem 2.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5.4rem;
+    gap: 3px;
+}
+
+.Layout-index-delete-deck-btn {
+
+}
+
+.create-deck-link {
+    background-color: #6c757d;
+    color: #fff;
+    border:1px solid #6c757d;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 11%;
+    gap: 5px;  
+    margin-bottom: 1.5%;
+}
+
+.create-deck-link:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #5c636a;
+    border-color: #565e64;
+}
+
+.create-deck-link:focus {
+    color: #fff;
+    text-decoration: none;
+    box-shadow: rgb(130, 138, 145);
+}
+
+.create-deck-link:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #565e64;
+    border-color: #51585e;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.create-deck-link:disabled {
+    color: #fff;
+    text-decoration: none;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+
+.trashcan-link {
+    color: #fff;
+    background-color: #dc3545;
+    border:1px solid #dc3545;
+    padding: .8rem 0;
+    border-radius: 6px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.4rem;
+    gap: 5px;
+}
+.trashcan-link:hover {
+    background-color: #bb2d3b;
+    color:#fff;
+    border-color: #b02a37; 
+    text-decoration: none; 
+}
+
+.trashcan-link:focus {
+    box-shadow: rgb(225, 83, 97);
+    text-decoration: none;
+}
+
+.trashcan-link:active {
+    color: #fff;
+    background-color: #b02a37;
+    border-color: #a52834;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    text-decoration: none;
+}
+.trashcan-link:disabled {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    text-decoration: none;
+}
+.Layout-index-card-count-div {
+    display:inline-block;
+    color: #a5a5a5;
+}
+
+.Layout-index-deck-title {
+    display:inline-block;
+    color: #676666;
+}
+
+.Layout-index-header-card-count-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Layout-index-deck-description {
+    color: #676666;
+}
+
+.Layout-indexheader-card-count-div {
+
+}
+/* End of './Layout/index.js' */
+
+
+/* Start of CreateDeck.js */
+
+
+.createDeck-create-deck-h1 {
+
+}
+
+#CreateDeck-name, #CreateDeck-description {
+    display: block;
+    width: 100%;
+    margin-top: .5rem;
+    padding: .5rem;
+}
+
+#CreateDeck-description {
+    height: 10rem;
+}
+.CreateDeck-cancel-btn {
+    margin-right: .5rem;
+}
+.CreateDeck-submit-btn {
+
+}
+/* End of CreateDeck.js */
+
+
+
+/* Start of AddCard.js */
+
+.AddCard-add-card-h2, .AddCard-deck-name-h2 {
+    display: inline;
+}
+
+#AddCard-front-text, #AddCard-back-text {
+    display: block;
+    width: 100%;
+}
+.AddCard-done-btn {
+    margin-right: .5rem;
+}
+
+.AddCard-save-btn {
+
+}
+
+/* End of AddCard.js */
+
+
+/* Start of Study.js */
+
+.Study-flip-btn {
+  margin-right: .5rem;
+  padding: .4rem .8rem;
+}
+
+.Study-next-btn {
+  padding: .4rem .75rem;
+}
+
+.Study-add-cards-to-deck {
+
+}
+
+/* End of Study.js */
+
+
+/* Start of Deck.js */
+.Deck-select-deck-btns-div {
+display: flex;
+}
+
+.Deck-select-deck-btns-div > * {
+    margin-right: .5rem;
+}
+
+.Deck-select-deck-btns-div :nth-child(3) {
+    margin-right: 72%;
+}
+
+.Deck-delete-deck-btn {
+  padding: 0 .6rem;
+}
+.Deck-delete-card-btn {
+  padding: .4rem .5rem;
+}
+
+ .Deck-add-cards-to-deck, .Deck-study-deck-btn, .Deck-edit-deck-btn {
+  padding: 0 .6rem 0 .4rem;
+}
+.Deck-delete-card-btn {
+  
+}
+.Deck-card-div {
+    border: 1px solid #dfd6d6;
+    padding: 1.1rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+}
+
+.Deck-card-div-btns-div {
+    display: flex;
+    gap: .5rem;
+}
+.Deck-card-div-front-div {
+    width: 21%;
+}
+
+.Deck-card-div-front-p {
+
+}
+
+.Deck-card-div-back-div {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 21%;
+    justify-content: center;
+}
+
+.Deck-card-div-back-p {
+
+}
+
+.Deck-select-deck-div {
+    margin-bottom: 1.5rem;
+}
+.card-div:has(.Deck-card-div-back-div):has(.Deck-card-div-btns-div):has(.Deck-delete-card-btn):active,
+.Deck-select-deck-div:has(.select-deck-btns-div):has(.Deck-delete-deck-btn):active {
+background-color: #d7d7d7d9;
+}
+.Deck-cards-div {
+
+}
+
+.Deck-edit-deck-btn {
+
+}
+
+.Deck-edit-card-btn {
+  padding: .4rem .7rem .4rem .4rem;
+}
+.Deck-study-deck-btn {
+
+}
+.Deck-add-cards-to-deck-btn {
+  width: 25%;
+  padding-right: 12px;
+}
+
+ .Deck-add-cards-to-deck-btn, .Deck-edit-deck-btn, .Deck-study-deck-btn, .Deck-delete-deck-btn, .Deck-edit-card-btn, .Deck-delete-card-btn {
+   display: flex;
+
+   align-items: center;
+   justify-content: space-between;
+   gap: 2px;
+ }
+
+.Deck-edit-deck-btn {
+ 
+ }
+
+
+/* End of Deck.js */
+
+
+
+/* Start of EditDeck.js */
+
+#EditDeck-deck-name, #EditDeck-deck-description {
+    display: block;
+    width: 100%;
+}
+
+#EditDeck-deck-description {
+    height: 12rem;
+    margin-bottom: 1rem;
+}
+
+.EditDeck-cancel-btn {
+    margin-right: .5rem;
+}
+
+.EditDeck-cancel-btn, .EditDeck-submit-btn {
+  padding: .4rem .7rem;
+}
+
+/* End of EditDeck.js */
+
+
+/* Start of EditCard.js */
+
+.EditCard-cancel-btn {
+    margin-right: .5rem;
+}
+
+.EditCard-cancel-btn, .EditCard-submit-btn {
+  padding: .4rem .7rem;
+}
+.EditCard-submit-btn {
+
+}
+#EditCard-front-text, #EditCard-back-text {
+    display: block;
+    width: 100%;
+    overflow-y: auto;
+    padding-left: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+#EditCard-front-text {
+    height: 5.7rem;
+}
+
+#EditCard-back-text {
+    height: 6rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.EditCard-front-text-label {
+    width: 100%;
+}
+
+/* End of EditCard.js */
