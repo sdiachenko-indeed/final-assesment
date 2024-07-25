@@ -1,9 +1,7 @@
 import React from "react";
-// import {act} from 'react';
-import { render, screen } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import App from "../App";
 import { MemoryRouter } from "react-router-dom";
-import { act } from 'react-dom/test-utils';
 import "@testing-library/jest-dom/extend-expect";
 import {
   createCard,
@@ -100,7 +98,7 @@ describe("App", () => {
         </MemoryRouter>
     );
 
-    await act(async () => mockDecksPromise);
+    await act(() => mockDecksPromise);
 
     expect(screen.getByText("Mock Rendering in React")).toBeTruthy();
     expect(screen.getByText("2 cards")).toBeTruthy();
